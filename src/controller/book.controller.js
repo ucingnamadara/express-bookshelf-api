@@ -81,7 +81,7 @@ const list = (req, res) => {
 
   temp.forEach((book) => {
     const { id, name: bookName, publisher } = book;
-    data.push({ id, book: bookName, publisher });
+    data.push({ id, name: bookName, publisher });
   });
   res.status(200).json({
     status: 'success',
