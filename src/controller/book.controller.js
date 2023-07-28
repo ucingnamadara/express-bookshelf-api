@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 const { nanoid } = require('nanoid');
 const books = require('../model/book');
 
@@ -72,11 +73,11 @@ const list = (req, res) => {
   }
 
   if (finished !== undefined) {
-    temp = temp.filter((s) => s.finished === Boolean(finished));
+    temp = temp.filter((s) => s.finished == finished);
   }
 
   if (reading !== undefined) {
-    temp = temp.filter((s) => s.reading === Boolean(reading));
+    temp = temp.filter((s) => s.reading == reading);
   }
 
   temp.forEach((book) => {
